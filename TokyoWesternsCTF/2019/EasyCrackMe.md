@@ -24,7 +24,7 @@ they use **strchr** for check how many character **0,1,2,3,4,5,6,7,8,9,a,b,c,d,e
 Then compare with this:
 ![](https://raw.githubusercontent.com/huymath2/RE/master/TokyoWesternsCTF/2019/image/4.png)
 Therefore we can know that flag is a hex string include:
-**(val : amount)** : 
+**(val : amount)**  
   30h : 3,
   31h : 2,
   32h : 2,
@@ -49,55 +49,57 @@ Next, we have two loops
 
 These two loops simple calculate sum and xor of each four identified index. Then compare with given const value
 This is context of two loop:
+***
 **First Loop**
 **Sum of index**    
-6, 7, 8, 9     = 15Eh
-10, 11, 12, 13 = 0DAh
-14, 15, 16, 17 = 12Fh
-	                18, 19, 20, 21 = 131h
-	                22, 23, 24, 25 = 100h
-	                26, 27, 28, 29 = 131h
-	                30, 31, 32, 33 = 0FBh
-	                34, 35, 36, 37 = 102h
-
+(6, 7, 8, 9     = 15Eh); 
+(10, 11, 12, 13 = 0DAh);
+(14, 15, 16, 17 = 12Fh);
+	                (18, 19, 20, 21 = 131h);
+	                (22, 23, 24, 25 = 100h);
+	                (26, 27, 28, 29 = 131h);
+	                (30, 31, 32, 33 = 0FBh);
+	                (34, 35, 36, 37 = 102h);
+***
 **XOR of index**  
-6, 7, 8, 9     = 52h
-	    10, 11, 12, 13 = 0Ch
-	    14, 15, 16, 17 = 01h
-	    18, 19, 20, 21 = 0Fh
-	    22, 23, 24, 25 = 5Ch
-	    26, 27, 28, 29 = 05h
-	    30, 31, 32, 33 = 53h
-	    34, 35, 36, 37 = 58h
-
+(6, 7, 8, 9 = 52h);
+	    (10, 11, 12, 13 = 0Ch);
+	    (14, 15, 16, 17 = 01h);
+	    (18, 19, 20, 21 = 0Fh);
+	    (22, 23, 24, 25 = 5Ch);
+	    (26, 27, 28, 29 = 05h);
+	    (30, 31, 32, 33 = 53h);
+	    (34, 35, 36, 37 = 58h);
+***
 **The Second Loop**
 **Sum of index** 
-6, 14, 22, 30  = 129h
-	    7, 15, 23, 31  = 103h
-	    8, 16, 24, 32  = 12Bh
-	    9, 17, 25, 33  = 131h
-	    10, 18, 26, 34 = 135h
-	    11, 19, 27, 35 = 10Bh
-	    12, 20, 28, 36 = 0FFh
-	    13, 21, 29, 37 = 0FFh
+	    (6, 14, 22, 30  = 129h);
+	    (7, 15, 23, 31  = 103h);
+	    (8, 16, 24, 32  = 12Bh);
+	    (9, 17, 25, 33  = 131h);
+	    (10, 18, 26, 34 = 135h);
+	    (11, 19, 27, 35 = 10Bh);
+	    (12, 20, 28, 36 = 0FFh);
+	    (13, 21, 29, 37 = 0FFh);
 
 **XOR of index**
-6, 14, 22, 30  = 01h 
-	    7, 15, 23, 31  = 57h
-	    8, 16, 24, 32  = 07h
-	    9, 17, 25, 33  = 0Dh
-	    10, 18, 26, 34 = 0Dh
-	    11, 19, 27, 35 = 53h
-	    12, 20, 28, 36 = 51h
-	    13, 21, 29, 37 = 51h
-
+	    (6, 14, 22, 30  = 01h);
+	    (7, 15, 23, 31  = 57h);
+	    (8, 16, 24, 32  = 07h);
+	    (9, 17, 25, 33  = 0Dh);
+	    (10, 18, 26, 34 = 0Dh);
+	    (11, 19, 27, 35 = 53h);
+	    (12, 20, 28, 36 = 51h);
+	    (13, 21, 29, 37 = 51h);
+***
 Next, we have a checking loop:
 ![](https://raw.githubusercontent.com/huymath2/RE/master/TokyoWesternsCTF/2019/image/6.5.png)
 ***
 This loop check whether current index was **char** or **int**.
 Thus i have true format of flag:
-**c : char**
+**c : char** ;
 **i : integer**
+***
 **TWCTF{cciciiiiciicciiciicicciiiiciiici}**
 
 Next, we have finnal loop and a _if_ condition:
