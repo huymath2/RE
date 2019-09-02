@@ -12,38 +12,40 @@ Now we must find 32 characters remaining. In my opiion, this is not warm up chal
 
 As you see, this is graph overview 
 ![](https://raw.githubusercontent.com/huymath2/RE/master/TokyoWesternsCTF/2019/image/2.png)
+***
 It looks like terrible, but don't worry. if you debug carefully, everything will be easy.
 
 _I think i should use source code for easier from now_.
 
 We can see first check loop:
 ![](https://raw.githubusercontent.com/huymath2/RE/master/TokyoWesternsCTF/2019/image/3.png)
-
+***
 they use **strchr** for check how many character **0,1,2,3,4,5,6,7,8,9,a,b,c,d,e,f** we had in flag.
 Then compare with this:
 ![](https://raw.githubusercontent.com/huymath2/RE/master/TokyoWesternsCTF/2019/image/4.png)
 Therefore we can know that flag is a hex string include:
-**val : amount**
-  30h : 3
-  31h : 2
-  32h : 2
-  33h : 0
-  34h : 3
-  35h : 2
-  36h : 1
-  37h : 3
-  38h : 3
-  39h : 1
-  61h : 1
-  62h : 3
-  63h : 1
-  64h : 2
-  65h : 2
+**(val : amount)** : 
+  30h : 3,
+  31h : 2,
+  32h : 2,
+  33h : 0,
+  34h : 3,
+  35h : 2,
+  36h : 1,
+  37h : 3,
+  38h : 3,
+  39h : 1,
+  61h : 1,
+  62h : 3,
+  63h : 1,
+  64h : 2,
+  65h : 2,
   66h : 3
-
+  
 Next, we have two loops
 ![](https://raw.githubusercontent.com/huymath2/RE/master/TokyoWesternsCTF/2019/image/5.png)
 ![](https://raw.githubusercontent.com/huymath2/RE/master/TokyoWesternsCTF/2019/image/6.png)
+***
 
 These two loops simple calculate sum and xor of each four identified index. Then compare with given const value
 This is context of two loop:
@@ -91,6 +93,7 @@ This is context of two loop:
 
 Next, we have a checking loop:
 ![](https://raw.githubusercontent.com/huymath2/RE/master/TokyoWesternsCTF/2019/image/6.5.png)
+***
 This loop check whether current index was **char** or **int**.
 Thus i have true format of flag:
 **c : char**
@@ -99,6 +102,7 @@ Thus i have true format of flag:
 
 Next, we have finnal loop and a _if_ condition:
 ![](https://raw.githubusercontent.com/huymath2/RE/master/TokyoWesternsCTF/2019/image/7.png)
+***
 Loop will calculate sum of all even index from sixth index and compare with 0x488
 **If** condition give us 6 values of 6 indexs.
 After understood purpose of this program, i wrote a C++ program to solve it.
