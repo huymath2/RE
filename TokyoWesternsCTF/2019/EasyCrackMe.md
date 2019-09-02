@@ -23,7 +23,9 @@ We can see first check loop:
 they use **strchr** for check how many character **0,1,2,3,4,5,6,7,8,9,a,b,c,d,e,f** we had in flag.
 Then compare with this:
 ![](https://raw.githubusercontent.com/huymath2/RE/master/TokyoWesternsCTF/2019/image/4.png)
+***
 Therefore we can know that flag is a hex string include:
+***
 **(val : amount)**  
   30h : 3,
   31h : 2,
