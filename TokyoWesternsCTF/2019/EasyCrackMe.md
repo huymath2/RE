@@ -6,6 +6,7 @@ Look at label **loc_40079F**, we can see a **strlen** function for input string 
 ![](https://raw.githubusercontent.com/huymath2/RE/master/TokyoWesternsCTF/2019/1.png)
 Next we have :
 ![](https://raw.githubusercontent.com/huymath2/RE/master/TokyoWesternsCTF/2019/image/1.png)
+***
 they take first 6 six characters of OurStr compare with string "TWCTF{" and last char with "}"(7Dh). Easily, we have flag format TWCTF{"something..."}
 Now we must find 32 characters remaining. In my opiion, this is not warm up challenge :v.
 
