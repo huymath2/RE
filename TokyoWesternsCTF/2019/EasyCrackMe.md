@@ -46,6 +46,7 @@ Therefore we can know that flag is a hex string include:
 
 ***
 Next, we have two loops
+***
 ![](https://raw.githubusercontent.com/huymath2/RE/master/TokyoWesternsCTF/2019/image/5.png)
 ***
 ![](https://raw.githubusercontent.com/huymath2/RE/master/TokyoWesternsCTF/2019/image/6.png)
