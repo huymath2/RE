@@ -43,9 +43,11 @@ Therefore we can know that flag is a hex string include:
   64h : 2,
   65h : 2,
   66h : 3
-  
+
+***
 Next, we have two loops
 ![](https://raw.githubusercontent.com/huymath2/RE/master/TokyoWesternsCTF/2019/image/5.png)
+***
 ![](https://raw.githubusercontent.com/huymath2/RE/master/TokyoWesternsCTF/2019/image/6.png)
 ***
 
@@ -95,6 +97,7 @@ This is context of two loop:
 	    (13, 21, 29, 37 = 51h);
 ***
 Next, we have a checking loop:
+***
 ![](https://raw.githubusercontent.com/huymath2/RE/master/TokyoWesternsCTF/2019/image/6.5.png)
 ***
 This loop check whether current index was **char** or **int**.
