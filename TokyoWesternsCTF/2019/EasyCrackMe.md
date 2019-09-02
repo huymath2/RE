@@ -56,6 +56,7 @@ These two loops simple calculate sum and xor of each four identified index. Then
 This is context of two loop:
 ***
 **First Loop**
+***
 **Sum of index**    
 (6, 7, 8, 9     = 15Eh); 
 (10, 11, 12, 13 = 0DAh);
@@ -77,6 +78,7 @@ This is context of two loop:
 	    (34, 35, 36, 37 = 58h);
 ***
 **The Second Loop**
+***
 **Sum of index** 
 	    (6, 14, 22, 30  = 129h);
 	    (7, 15, 23, 31  = 103h);
